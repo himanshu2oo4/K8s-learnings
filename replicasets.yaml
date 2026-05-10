@@ -9,16 +9,17 @@ spec:
   replicas: 3 
   selector:
     matchLabels:
-      app: myapp 
+      env: production
   template:
     metadata:
-      name: nginx-pod
       labels:
-        app: myapp 
-        tier: front-end
+        env: production    # if i already have 2 pods which have env production label so it will create only 1 extra pod 
+                        # Replicasets check both already existing and newly created pods to match the 
+                           # desired state 
     spec:
       containers:
         - name: nginx
           image: nginx:latest 
           ports: 
             - containerPort: 80
+          

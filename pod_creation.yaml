@@ -3,8 +3,7 @@ kind: Pod
 metadata: 
   name: nginx-pod   # name of the pod 
   labels:   # these labels are for filtering at some stages if you need 
-    app: my-app   
-    tier: front-end
+    env: production
 
 spec:   # specifications of your container 
   containers:
