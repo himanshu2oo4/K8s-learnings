@@ -12,3 +12,7 @@
     run : kubectl delete rc RcName 
         # RcName : setted by your configuration file -> check in metadata
 
+
+# if you want to scale up or down you can use 
+command: kubectl scale --replicas=6 -f .\replication_controller.yaml
+
