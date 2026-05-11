@@ -25,7 +25,8 @@ command: kubectl scale --replicas=6 -f .\replication_controller.yaml
     - changes made to this file will directly be applied to the running replicaset \
 
 
-# DEPLOYMENTS : which is mainly used in production to make these operation automated : 
+# DEPLOYMENTS : higher level object of K8 which manages the pod automatically.  
+    @@ which is mainly used in production to make these operation automated : 
         - pods & replicaset creation/management  
         - updating apps without downtime
         - Rollbacks to previous versions 
@@ -46,4 +47,4 @@ To delete a deployment :
     command : kubectl delete deployment deploymentName
     automatically delete the replicaset created and the pods also 
 
-    
+
