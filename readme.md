@@ -77,3 +77,11 @@ means:
 # if you want to change the desc for a rollout 
 
     - kubectl annotate deployment/name kubernetes.io/change-cause="message you want"  --overwrite
+
+
+# services running 
+    - if you have worker node ip directly use workerNodeIp:30004 
+    - but on minikube use minikube service serviceName --url 
+    -  then hit that url 
+
+  
