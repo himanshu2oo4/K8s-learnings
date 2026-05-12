@@ -48,3 +48,32 @@ To delete a deployment :
     automatically delete the replicaset created and the pods also 
 
 
+
+# to get the rollout history 
+kubectl rollout history deployment/name 
+
+# to get the status of rollout 
+
+kubectl rollout status deployment/name 
+
+# NOTE :
+=>  deployment "my-deployment" successfully rolled out
+
+means:
+
+✅ New ReplicaSet created
+✅ New Pods created
+✅ Pods became Running and Ready
+✅ Old Pods terminated successfully
+✅ Deployment update completed
+
+
+
+# if you want to undo to a previous version :   
+-- by default previous version automatically 
+    kubectl rollback undo deployment/name --to-revision=NumberFromHistory
+
+
+# if you want to change the desc for a rollout 
+
+    - kubectl annotate deployment/name kubernetes.io/change-cause="message you want"  --overwrite
