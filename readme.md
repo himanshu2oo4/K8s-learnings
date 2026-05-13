@@ -79,7 +79,9 @@ means:
     - kubectl annotate deployment/name kubernetes.io/change-cause="message you want"  --overwrite
 
 
-# services running 
+# services running
+    $ create a service and put ports and selector and then 
+        - kubectl create -f serviceFile.yaml 
     - if you have worker node ip directly use workerNodeIp:30004 
     - but on minikube use minikube service serviceName --url 
     -  then hit that url 
